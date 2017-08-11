@@ -8,7 +8,6 @@ const EventSchema = mongoose.Schema({
     name: String,
     venue: String,
     date: Date,
-    time: Number
 });
 
 const UserSchema = mongoose.Schema({

@@ -1,5 +1,6 @@
 require("dotenv").config();
 var mongoose = require('mongoose');
+var moment = require('moment');
 mongoose.connect(process.env.MONGODB_URI);
 
 var Location = require('../models/location');
@@ -32,15 +33,14 @@ const orlando = new Location ({
 const convention = new Event ({
     name: "DragonCon",
     venue: "Hyatt Regency Atlanta",
-    date: "September 1 - Semptember 4",
-    time: "12:00AM - 11:59PM"
+    date: moment('09/01/2017', 'MM/DD/YYYY', true).format()
 });
 
 const sport = new Event ({
     name: "Atlanta United vs. FC Dallas",
     venue: "Mercedes-Benz Stadium",
-    date: "September 10",
-    time: "3:30PM"
+    date: moment('09/10/2017', 'MM/DD/YYYY', true).format()
+    
 });
 
 
