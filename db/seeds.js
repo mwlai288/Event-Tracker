@@ -17,7 +17,7 @@ User.remove({}, (err) => console.log(err));
 // Create new Locations
 
 const atlanta = new Location ({
-    city: "Atlanta, GA",
+    place: "Atlanta, GA",
 });
 
 const charleston = new Location ({
