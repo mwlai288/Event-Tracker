@@ -8,6 +8,7 @@ const EventSchema = mongoose.Schema({
     name: String,
     venue: String,
     date: Date,
+    description: String
 });
 
 const UserSchema = mongoose.Schema({

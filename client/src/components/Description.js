@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class User extends Component {
+class Description extends Component {
   render() {
     return (
       <div>
-        Hello from User
+        Hello from Descriptions       
       </div>
     );
   }
 }
 
-export default User;
+export default Description;
 
