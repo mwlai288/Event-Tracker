@@ -7,15 +7,22 @@ class Event extends Component {
     constructor() {
       super();
       this.state = {
-        name: "",
-        venue: "",
-        date: ""
-      }
+        event: [
+            {
+                name:'' ,
+                venue:'' ,
+                date: ''
+            },
+            {
+                name: '',
+                venue:'' ,
+                date:''
+            }
+        ]
+    }
   }
 
-
-
-  componentWillMount() {
+    componentWillMount() {
     axios.get("/api/event").then((res) => {
     const foundData = res.data;
     console.log(res.data);
@@ -34,10 +41,9 @@ class Event extends Component {
               {this.state.event.map((event, i) => {
                   return (
                       <li key={i}>
-                         <Link to={`/event/${event._id}`}>
-                              {event.name}
-                              {event.venue}
-                              {event.date}
+                         <Link to={`/location/${event._id}/description`}>
+                         {/* {event.name} */}
+                         <h2>sup</h2>
                          </Link> 
                        </li> ); 
                       })} 
