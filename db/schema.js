@@ -8,7 +8,9 @@ const EventSchema = mongoose.Schema({
     name: String,
     venue: String,
     date: Date,
-    description: String
+    description: String,
+    url: String,
+    imgUrl: String
 });
 
 const UserSchema = mongoose.Schema({

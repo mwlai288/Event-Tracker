@@ -33,15 +33,19 @@ const orlando = new Location ({
 const convention = new Event ({
     name: "DragonCon",
     venue: "Hyatt Regency Atlanta",
-    // description: "Largest multi-media, popular culture convention focusing on science fiction and fantasy, gaming, comics, literature, art, music, and film in the universe!",
-    date: moment('09/01/2017', 'MM/DD/YYYY', true).format()    
+    date: moment('09/01/2017', 'MM/DD/YYYY', true).format()
+    // description: "Largest multi-media, popular culture convention focusing on science fiction and fantasy, gaming, comics, literature, art, music, and film in the universe!",    
+    // url: "http://dragoncon.org/",
+    // imgUrl: "http://www.georgiaaquarium.org/images/default-source/default-album/2016_dragoncon.png?sfvrsn=1"
 });
 
 const sport = new Event ({
     name: "Atlanta United vs. FC Dallas",
     venue: "Mercedes-Benz Stadium",
-    // description: "MLS Soccer",
     date: moment('09/10/2017', 'MM/DD/YYYY', true).format()
+    // description: "MLS Soccer",
+    // url: "https://www.atlutd.com/",
+    // imgUrl: "http://www.underconsideration.com/brandnew/archives/atlanta_united_fc_logo_detail.png"
 });
 
 

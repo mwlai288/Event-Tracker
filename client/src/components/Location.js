@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import  { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class Location extends Component {
@@ -17,10 +17,9 @@ class Location extends Component {
     }
 
     componentWillMount() {
-
-        axios.get("/api/location").then((res) => {
-                console.log(res);
-                this.setState({location: res.data});
+            axios.get("/api/location").then((res) => {
+            console.log(res);
+            this.setState({location: res.data});
             });
     }
 
@@ -32,19 +31,22 @@ class Location extends Component {
         return (
             <div>
               <h1>Hello from Locations</h1>
+
+              <input type="text" 
+                       value={this.state.search}
+                       onChange={this.updateSearch.bind(this)} />
+
                 <ul>
                 {filterLocation.map((location, i) => {
                     return (
                         <li key={i}>
-                           <Link to={`/location/${location._id}`}>
+                           <Link to={`/location/${location._id}/event`}>
                                 {location.place}
                            </Link>
                         </li> );
                         })} 
                 </ul>
-                <input type="text" 
-                       value={this.state.search}
-                       onChange={this.updateSearch.bind(this)} />
+               
             </div>
         )
     }
