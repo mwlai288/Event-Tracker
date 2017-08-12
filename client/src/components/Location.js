@@ -7,8 +7,13 @@ class Location extends Component {
     constructor() {
         super();
         this.state = {
-            location: []
-        }
+            location: [],
+            search: ""
+        };
+    }
+
+    updateSearch(event){ 
+        this.setState({search: event.target.value});
     }
 
     componentWillMount() {
@@ -16,25 +21,30 @@ class Location extends Component {
         axios.get("/api/location").then((res) => {
                 console.log(res);
                 this.setState({location: res.data});
-                // id: res.data._id, location: res.data.location });
             });
     }
 
     render() {
+        let filterLocation = this.state.location.filter((location) => {
+                return location.place.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+            }
+        );
         return (
             <div>
               <h1>Hello from Locations</h1>
                 <ul>
-                {this.state.location.map((location, i) => {
+                {filterLocation.map((location, i) => {
                     return (
                         <li key={i}>
                            <Link to={`/location/${location._id}`}>
                                 {location.place}
                            </Link>
                         </li> );
-                        })
-                    } 
+                        })} 
                 </ul>
+                <input type="text" 
+                       value={this.state.search}
+                       onChange={this.updateSearch.bind(this)} />
             </div>
         )
     }

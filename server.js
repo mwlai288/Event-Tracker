@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const LocationController = require('./controllers/location');
+const EventController = require('./controllers/event');
 const app = express();
 
 mongoose.Promise = global.Promise;
@@ -22,6 +23,7 @@ connection.on('error', (err) => {
 app.use(bodyParser.json());
 
 app.use('/api/location', LocationController);
+app.use('/api/event', EventController);
 app.get('/', (req,res) => {
   res.send('HELLO DUDE!')
 })
