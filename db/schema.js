@@ -11,9 +11,6 @@ const LocationSchema = mongoose.Schema({
     event: [EventSchema]
 });
 
-
-
-
 const UserSchema = mongoose.Schema({
     firstName: String,
     lastName: String,

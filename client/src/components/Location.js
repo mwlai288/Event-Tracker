@@ -33,8 +33,9 @@ class Location extends Component {
               <h1>Hello from Locations</h1>
 
               <input type="text" 
-                       value={this.state.search}
-                       onChange={this.updateSearch.bind(this)} />
+                     placeholder ='Search'
+                     value={this.state.search}
+                     onChange={this.updateSearch.bind(this)} />
 
                 <ul>
                 {filterLocation.map((location, i) => {
