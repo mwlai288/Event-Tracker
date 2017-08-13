@@ -34,14 +34,21 @@ const convention = new Event ({
     name: "DragonCon",
     venue: "Hyatt Regency Atlanta",
     date: moment('09/01/2017', 'MM/DD/YYYY', true).format(),
-    location: [ ]
+    location: [atlanta]
 });
 
 const sport = new Event ({
     name: "Atlanta United vs. FC Dallas",
     venue: "Mercedes-Benz Stadium",
     date: moment('09/10/2017', 'MM/DD/YYYY', true).format(),
-    location: [ ]
+    location: [atlanta]
+});
+
+const park = new Event ({
+    name: "Le Salon",
+    venue: "Le Salon",
+    date: moment('09/26/2017', 'MM/DD/YYYY').format(),
+    location: [orlando]
 });
 
 

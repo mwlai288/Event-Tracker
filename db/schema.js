@@ -1,17 +1,18 @@
 const mongoose = require('mongoose');
 
-
-const LocationSchema = mongoose.Schema({
-    place: String, 
-});
-
-
 const EventSchema = mongoose.Schema({
     name: String,
     venue: String,
-    date: Date,
-    location: [LocationSchema]
+    date: Date
 });
+
+const LocationSchema = mongoose.Schema({
+    place: String, 
+    event: [EventSchema]
+});
+
+
+
 
 const UserSchema = mongoose.Schema({
     firstName: String,
