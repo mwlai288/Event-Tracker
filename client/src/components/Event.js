@@ -22,8 +22,7 @@ class Event extends Component {
     }
   }
 
-
-    componentWillMount() {
+componentWillMount() {
         axios.get("/api/event").then((res) => {
             console.log(res);
             this.setState({event: res.data})
@@ -40,7 +39,7 @@ class Event extends Component {
               {this.state.event.map((event, i) => {
                   return (
                       <li key={i}>
-                         <Link to={`/event/${event._id}/description`}>
+                         <Link to={`/event/:eventId}/description`}>
                          {event.name}
                          {event.venue}
                          {event.date}
@@ -50,7 +49,7 @@ class Event extends Component {
               </ul>
           </div>
       )
-  }
+    }
 }
 
 

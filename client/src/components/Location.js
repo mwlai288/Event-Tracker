@@ -41,7 +41,7 @@ class Location extends Component {
                 {filterLocation.map((location, i) => {
                     return (
                         <li key={i}>
-                           <Link to={`/location/${location._id}/event`}>
+                           <Link to={`/location/${location._id}`}>
                                 {location.place}
                            </Link>
                         </li> );

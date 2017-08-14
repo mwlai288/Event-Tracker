@@ -4,6 +4,9 @@ import Location from './components/Location';
 import Event from './components/Event';
 import Description from './components/Description';
 import User from './components/User';
+import NavBar from './styles/NavBar'
+
+
 
 const Home = () => (
   <div>
@@ -14,21 +17,27 @@ const Home = () => (
   </div> 
 )
 
+
+
 class App extends Component {
   render() {
     return (
-      <Router>
+     <Router>
+        <div> 
+        <NavBar>
+            <Link to="/">Home</Link>
+            <Link to="/user">My Profile</Link>
+          </NavBar> 
         <div>
-         
-          <div>
             <Route exact path="/" component={Home}/>
             <Route exact path="/location" component={Location}/>
-            <Route exact path="/location/:id/event" component={Event}/>
+            <Route exact path="/location/:id" component={Event}/>
             <Route exact path="/event/:eventId/description" component={Description}/>
             <Route exact path="/user" component={User}/>
           </div>
-        </div>
+         </div>
       </Router>
+          
     );
   }
 }

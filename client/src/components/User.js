@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 // import styled from 'styled-components';
 import axios from 'axios';
-
+import Location from './Location';
 // import Event from './Event';
 
 
 class User extends Component {
 
-_handleSubmitLocation = (location) => {
-  location.preventDefault();
-  console.log('please');
-  axios.post('/api/location' ,{ 
-    place: ''
-  }).then((res)=> {
-    console.log('woohoo');
-  }).catch (err => console.log('oops'));
-};
-
+// _handleSubmitLocation = (location) => {
+//   location.preventDefault();
+//   console.log('sup');
+//   axios.post('/api/location', 
+//         {banana: 'banana', location: this.state.place})
+//         .then(res => {
+//           console.log("new city");
+//           console.log(res.data);
+//           this.setState({redirect: true, id: res.data._id});
+//         });
+// };
 // _handleSubmitEvent = (e) => {
 //   e.preventDefault();
 //   axios.post('/api/event').then((res)=> {
@@ -24,7 +25,7 @@ _handleSubmitLocation = (location) => {
 //   }).catch (err => console.log('oops'));
 // };
 
-  render() {
+  render()  {
     return (
       <div>
         Hello from User
@@ -40,9 +41,9 @@ _handleSubmitLocation = (location) => {
         <form onSubmit={this._handleSubmitLocation}>
         <lable htmlFor="name">Location: </lable> 
         <input 
+            onChange={this._handleSubmitLocation}
             value={this.props.location.place}
-            type='text'
-            name='location'/>
+            type='text' />
         <button> Add New Location </button>
         </form>  
         

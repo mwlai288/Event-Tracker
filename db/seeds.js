@@ -14,10 +14,31 @@ Location.remove({}, (err) => console.log(err));
 Event.remove({}, (err) => console.log(err));
 User.remove({}, (err) => console.log(err));
 
+// Create new Events
+
+const convention = new Event ({
+    name: "DragonCon",
+    venue: "Hyatt Regency Atlanta",
+    date: moment('09/01/2017', 'MM/DD/YYYY', true).format()
+});
+
+const sport = new Event ({
+    name: "Atlanta United vs. FC Dallas",
+    venue: "Mercedes-Benz Stadium",
+    date: moment('09/10/2017', 'MM/DD/YYYY', true).format()
+});
+
+const park = new Event ({
+    name: "Le Salon",
+    venue: "Le Salon",
+    date: moment('09/26/2017', 'MM/DD/YYYY').format()
+});
+
 // Create new Locations
 
 const atlanta = new Location ({
     place: "Atlanta, GA",
+    events: [convention, sport]
 });
 
 const charleston = new Location ({
@@ -26,31 +47,8 @@ const charleston = new Location ({
 
 const orlando = new Location ({
     place: "Orlando, FL",
+    events: [park]
 });
-
-// Create new Events
-
-const convention = new Event ({
-    name: "DragonCon",
-    venue: "Hyatt Regency Atlanta",
-    date: moment('09/01/2017', 'MM/DD/YYYY', true).format(),
-    location: [atlanta]
-});
-
-const sport = new Event ({
-    name: "Atlanta United vs. FC Dallas",
-    venue: "Mercedes-Benz Stadium",
-    date: moment('09/10/2017', 'MM/DD/YYYY', true).format(),
-    location: [atlanta]
-});
-
-const park = new Event ({
-    name: "Le Salon",
-    venue: "Le Salon",
-    date: moment('09/26/2017', 'MM/DD/YYYY').format(),
-    location: [orlando]
-});
-
 
 // create new Users
 const will = new User ({
@@ -93,7 +91,10 @@ atlanta.save(function(err) {
     console.log('sport created!');
   });
 
-
+  park.save(function(err) {
+      if (err) console.log(err);
+      console.log('park created!');
+  });
   // save the User
 
   will.save(function(err) {

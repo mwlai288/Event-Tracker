@@ -5,7 +5,6 @@ class Description extends Component {
   render() {
 
 
-
     return (
       <div>
         <h1>Welcome to DragonCon 2017</h1>
