@@ -16,11 +16,15 @@ router.get("/:id", (req, res) => {
   });
 });
 
-router.post('/location', (req,res) => {
-    Location.create(req.body).then((location => {
-      res.send(location);
-    }));
-});
+router.post('/', (req,res) => {
+  const newLocation = new Location();
+  console.log(req.body);
+  newLocation.place = req.body.location.place;
+
+  newLocation.save().then((location) => {
+    res.json(location);
+  }).catch(err => console.log(err));
+})
 
 
 module.exports = router;

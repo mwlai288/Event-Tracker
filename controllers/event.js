@@ -10,9 +10,16 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
+  console.log(req.params.id)
   Event.findById(req.params.id).then((event) => {
-    res.json(event);
+  res.json(event);
   });
 });
+
+// router.post('/', (req,res) => {
+//   const newEvent = new Event();
+//   console.log(req.body);
+//   newEvent
+// })
 
 module.exports = router;

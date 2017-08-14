@@ -11,7 +11,9 @@ class EventList extends Component {
               {
                   name:'' ,
                   venue:'' ,
-                  date: ''
+                  date: '',
+                  description: '',
+                  imgUrl: ''
               },
               {
                   name: '',
@@ -22,8 +24,7 @@ class EventList extends Component {
       }
     }
 
-    componentWillMount() {
-        // const id = this.props.match.params.eventId;
+    componentWillMount() {        
         const locationId = this.props.match.params.locationId;
         console.log(locationId)
         axios.get(`/api/location/${locationId}`).then((res) => {
@@ -33,12 +34,13 @@ class EventList extends Component {
     }
 
     render() {
+        const id = this.props.match.params.eventsId;
         return (
             <ul>
             {this.state.events.map((event, i) => {
                 return (
                     <li key={i}>
-                       <Link to={'/event/:eventId/description'}>
+                       <Link to={`/event/${event._id}/description`}>
                        {event.name}
                        {event.venue}
                        {event.date}

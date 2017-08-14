@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Location from './components/Location';
 import Event from './components/Event';
+import EventList from './components/EventList'
 import Description from './components/Description';
 import User from './components/User';
 import {HomePageTitle} from './styles/Styling';
 import NavBar from './styles/NavBar';
 import styled from 'styled-components';
-import EventList from './components/EventList'
+
 
 const Home = () => (
   <div>
@@ -35,7 +36,7 @@ class App extends Component {
           </HomePageTitle>
             <Route exact path="/location" component={Location}/>
             <Route exact path="/location/:locationId/event" component={EventList}/>
-            <Route exact path="/location/event/:eventId/description" component={Description}/>
+            <Route exact path="/event/:eventId/description" component={Description}/>
             <Route exact path="/user" component={User}/>
           
           </div>

@@ -8,7 +8,6 @@ const EventSchema = mongoose.Schema({
 
 const LocationSchema = mongoose.Schema({
     place: String, 
-    // id: Number,
     events: [EventSchema]
 });
 
