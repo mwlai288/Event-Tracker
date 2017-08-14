@@ -10,6 +10,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
+  console.log(req.params.id)
   Location.findById(req.params.id).then((location) => {
     res.json(location);
   });

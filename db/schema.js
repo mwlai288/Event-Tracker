@@ -8,7 +8,8 @@ const EventSchema = mongoose.Schema({
 
 const LocationSchema = mongoose.Schema({
     place: String, 
-    event: [EventSchema]
+    // id: Number,
+    events: [EventSchema]
 });
 
 const UserSchema = mongoose.Schema({

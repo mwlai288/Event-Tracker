@@ -2,32 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+import EventList from './EventList';
+
 class Event extends Component {
  
-    constructor() {
-      super();
-      this.state = {
-        event: [
-            {
-                name:'' ,
-                venue:'' ,
-                date: ''
-            },
-            {
-                name: '',
-                venue:'' ,
-                date:''
-            }
-        ]
-    }
-  }
-
-componentWillMount() {
-        axios.get("/api/event").then((res) => {
-            console.log(res);
-            this.setState({event: res.data})
-    });
-}
 
   render() {
     
@@ -35,18 +13,7 @@ componentWillMount() {
           <div>
             <h1>Hello from Events</h1>
 
-              <ul>
-              {this.state.event.map((event, i) => {
-                  return (
-                      <li key={i}>
-                         <Link to={`/event/:eventId}/description`}>
-                         {event.name}
-                         {event.venue}
-                         {event.date}
-                         </Link> 
-                       </li> ); 
-                      })} 
-              </ul>
+              <EventList />
           </div>
       )
     }

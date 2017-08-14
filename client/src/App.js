@@ -7,7 +7,7 @@ import User from './components/User';
 import {HomePageTitle} from './styles/Styling';
 import NavBar from './styles/NavBar';
 import styled from 'styled-components';
-
+import EventList from './components/EventList'
 
 const Home = () => (
   <div>
@@ -34,8 +34,8 @@ class App extends Component {
           <Route exact path="/" component={Home}/>
           </HomePageTitle>
             <Route exact path="/location" component={Location}/>
-            <Route exact path="/location/:id" component={Event}/>
-            <Route exact path="/event/:eventId/description" component={Description}/>
+            <Route exact path="/location/:locationId/event" component={EventList}/>
+            <Route exact path="/location/event/:eventId/description" component={Description}/>
             <Route exact path="/user" component={User}/>
           
           </div>

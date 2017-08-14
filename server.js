@@ -22,7 +22,7 @@ connection.on('error', (err) => {
 
 app.use(bodyParser.json());
 
-app.use('/api/location', LocationController);
+app.use('/api/location/', LocationController);
 app.use('/api/event', EventController);
 app.get('/', (req,res) => {
   res.send('HELLO DUDE!')

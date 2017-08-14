@@ -25,29 +25,40 @@ const convention = new Event ({
 const sport = new Event ({
     name: "Atlanta United vs. FC Dallas",
     venue: "Mercedes-Benz Stadium",
-    date: moment('09/10/2017', 'MM/DD/YYYY', true).format()
+    date: moment('09/10/2017 3:30 pm', 'MM/DD/YYYY h:mm a',  true).format()
 });
 
 const park = new Event ({
     name: "Le Salon",
     venue: "Le Salon",
-    date: moment('09/26/2017', 'MM/DD/YYYY').format()
+    date: moment('09/26/2017', 'MM/DD/YYYY', true).format()
 });
+
+const concert = new Event ({
+    name: "Ed Sheeran Concert",
+    venue: "North Charleston Coliseum and PAC",
+    date: moment('09/05/2017', 'MM/DD/YYYY', true).format()
+})
+
+
 
 // Create new Locations
 
 const atlanta = new Location ({
     place: "Atlanta, GA",
+    // id: EventSchema.ObjectId,
     events: [convention, sport]
 });
 
 const charleston = new Location ({
     place: "Charleston, SC",
+    events: [concert]
 });
 
 const orlando = new Location ({
     place: "Orlando, FL",
-    events: [park]
+    // id: EventSchema.ObjectId,
+    events: [park]  
 });
 
 // create new Users
@@ -58,6 +69,7 @@ const will = new User ({
 });
 
 // save the Locations
+
 
 atlanta.save(function(err) {
     if (err) console.log(err);
@@ -95,6 +107,12 @@ atlanta.save(function(err) {
       if (err) console.log(err);
       console.log('park created!');
   });
+
+  concert.save(function(err) {
+    if (err) console.log(err);
+    console.log('concert created!');
+  });
+ 
   // save the User
 
   will.save(function(err) {
