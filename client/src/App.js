@@ -4,24 +4,25 @@ import Location from './components/Location';
 import Event from './components/Event';
 import Description from './components/Description';
 import User from './components/User';
-import NavBar from './styles/NavBar'
-
+import {HomePageTitle} from './styles/Styling';
+import NavBar from './styles/NavBar';
+import styled from 'styled-components';
 
 
 const Home = () => (
   <div>
-    <h1>Welcome to Working Title</h1>
+  <h1>Welcome to Event Space</h1>
   <Link to="/location"><button>Click to Begin</button></Link>
   <br/>
   <Link to="/user"><button>Profile</button></Link>
-  </div> 
+  </div>
 )
-
 
 
 class App extends Component {
   render() {
     return (
+      
      <Router>
         <div> 
         <NavBar>
@@ -29,15 +30,17 @@ class App extends Component {
             <Link to="/user">My Profile</Link>
           </NavBar> 
         <div>
-            <Route exact path="/" component={Home}/>
+          <HomePageTitle>
+          <Route exact path="/" component={Home}/>
+          </HomePageTitle>
             <Route exact path="/location" component={Location}/>
             <Route exact path="/location/:id" component={Event}/>
             <Route exact path="/event/:eventId/description" component={Description}/>
             <Route exact path="/user" component={User}/>
+          
           </div>
          </div>
       </Router>
-          
     );
   }
 }

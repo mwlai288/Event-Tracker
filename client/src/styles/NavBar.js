@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 const NavBar = styled.div`
   height: 30px;
-  background-color: black;
+  background-color: #F4D03F;
   color: white;
   text-decoration: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
 
   a {
