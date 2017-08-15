@@ -15,7 +15,6 @@ const Home = () => (
   <h1>Welcome to Event Space</h1>
   <Link to="/location"><button>Click to Begin</button></Link>
   <br/>
-  <Link to="/user"><button>Profile</button></Link>
   </div>
 )
 
@@ -29,6 +28,7 @@ class App extends Component {
         <NavBar>
             <Link to="/">Home</Link>
             <Link to="/user">My Profile</Link>
+            <Link to="/location">Location</Link>
           </NavBar> 
         <div>
           <HomePageTitle>

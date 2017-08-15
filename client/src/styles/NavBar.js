@@ -6,7 +6,7 @@ const NavBar = styled.div`
   color: white;
   text-decoration: none;
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
   align-items: center;
 
   a {

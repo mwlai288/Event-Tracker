@@ -16,10 +16,15 @@ router.get("/:id", (req, res) => {
   });
 });
 
-// router.post('/', (req,res) => {
-//   const newEvent = new Event();
-//   console.log(req.body);
-//   newEvent
-// })
+router.post('/', (req,res) => {
+  const newEvent = new Event();
+  console.log(req.body);
+  newEvent.name = req.body.events.name;
+
+
+  newEvent.save().then((events) => {
+    res.json(event);
+  }).catch(err => console.log(err));
+});
 
 module.exports = router;

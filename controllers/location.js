@@ -24,7 +24,7 @@ router.post('/', (req,res) => {
   newLocation.save().then((location) => {
     res.json(location);
   }).catch(err => console.log(err));
-})
+});
 
 
 module.exports = router;
