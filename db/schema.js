@@ -13,7 +13,7 @@ const LocationSchema = mongoose.Schema({
 
 const UserSchema = mongoose.Schema({
     firstName: String,
-    lastName: String,
+    userName: String,
     favoriteEvent: [EventSchema]
 });
 

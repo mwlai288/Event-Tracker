@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const NavBar = styled.div`
   height: 30px;
-  background-color: #F4D03F;
+  background-color: #B09108;
   color: white;
   text-decoration: none;
   display: flex;

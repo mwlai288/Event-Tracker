@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import  { Link } from 'react-router-dom';
 import axios from 'axios';
 
+import AddEvent from './AddEvent'
+
 
 
 class Location extends Component {
@@ -32,7 +34,7 @@ class Location extends Component {
         );
         return (
             <div>
-              <h1>Hello from Locations</h1>
+              <h1>Choose Your City</h1>
 
               <input type="text" 
                      placeholder ='Search'
@@ -50,6 +52,8 @@ class Location extends Component {
                         })} 
                 </ul>
                
+
+        
             </div>
         )
     }

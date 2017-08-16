@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import AddEvent from './AddEvent'
 
 class EventList extends Component {
 
@@ -25,17 +26,22 @@ class EventList extends Component {
     }
 
     componentWillMount() {        
-        const locationId = this.props.match.params.locationId;
-        console.log(locationId)
-        axios.get(`/api/location/${locationId}`).then((res) => {
-        console.log(res);
-        this.setState({events: res.data.events})
-    });
+         this._getEvents()
     }
-
+    
+    _getEvents = () => {
+        const locationId = this.props.match.params.locationId;
+        axios.get(`/api/location/${locationId}`).then((res) => {
+            console.log(res);
+            this.setState({events: res.data.events})
+        });
+    }
     render() {
         const id = this.props.match.params.eventsId;
         return (
+            
+            <div>
+                <h1>Pick an Event</h1>
             <ul>
             {this.state.events.map((event, i) => {
                 return (
@@ -43,11 +49,14 @@ class EventList extends Component {
                        <Link to={`/event/${event._id}/description`}>
                        {event.name}
                        {event.venue}
-                       {event.date}
+                       
                        </Link> 
-                     </li> ); 
+                     </li> 
+                     ); 
                     })} 
             </ul>
+            <AddEvent getEvents={this._getEvents} />
+            </div>
         )
     }
 }

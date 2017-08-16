@@ -25,7 +25,7 @@ const convention = new Event ({
 const sport = new Event ({
     name: "Atlanta United vs. FC Dallas",
     venue: "Mercedes-Benz Stadium",
-    date: moment('09/10/2017 3:30 pm', 'MM/DD/YYYY h:mm a',  true).format()
+    date: moment('09/10/2017', 'MM/DD/YYYY',  true).format()
 });
 
 const park = new Event ({
@@ -64,7 +64,7 @@ const orlando = new Location ({
 // create new Users
 const will = new User ({
     firstName: "Will",
-    lastName: "Lai",
+    userName: "The Best Username",
     favoriteEvent: [ ]
 });
 

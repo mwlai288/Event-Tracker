@@ -6,14 +6,11 @@ import EventList from './EventList';
 
 class Event extends Component {
  
-
   render() {
-    
       return (
           <div>
-            <h1>Hello from Events</h1>
-
-              <EventList />
+            
+              <EventList />        
           </div>
       )
     }

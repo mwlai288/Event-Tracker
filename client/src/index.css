@@ -1,5 +1,9 @@
 body {
+  /* text-shadow: 2px 2px #831609; */
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: #F35901;
+  font-family: 'Playfair Display', serif;  
+  /* background-image: url("http://i.imgur.com/0Tw6MyE.jpg"); */
 }

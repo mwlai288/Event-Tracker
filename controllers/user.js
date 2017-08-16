@@ -16,11 +16,12 @@ router.get("/:id", (req, res) => {
   });
 });
 
-router.put('/user', (req,res) => {
-  User.create(req.body).then((user => {
-    res.send(user);
-  }));
+router.get('/new', (req, res) => {
+  const userId = req.params.userId;
+  User.findById(req.params.id)
+  console.log(userId);
+  res.json('users/new', {
+    userId
+  })
 });
-
-
 module.exports = router;

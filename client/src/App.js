@@ -34,11 +34,11 @@ class App extends Component {
           <HomePageTitle>
           <Route exact path="/" component={Home}/>
           </HomePageTitle>
-            <Route exact path="/location" component={Location}/>
+            <Route exact path="/location" component={Location}/>  
             <Route exact path="/location/:locationId/event" component={EventList}/>
             <Route exact path="/event/:eventId/description" component={Description}/>
             <Route exact path="/user" component={User}/>
-          
+            
           </div>
          </div>
       </Router>
