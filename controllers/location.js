@@ -45,19 +45,19 @@ router.get('/:locationId/delete', (req,res) =>{
 });
 
 // Update Location
-router.put('/:location', (req, res) => {
-  const locationId = req.params.battleId;
-  console.log(locationId);
-  Location.findById(locationId).then((location) => {
-    const foundLocation = location.place.find((location) => {
-      return place.id === placeId;
-    });
-    foundLocation.place = req.body.place;
-    location.save();
-    console.log('SUCCESS');
-    });
-    }).catch((error) => {
-    console.log(error);
-    });
-    
+// router.put('/:location', (req, res) => {
+//   const locationId = req.params.battleId;
+//   console.log(locationId);
+//   Location.findById(locationId).then((location) => {
+//     const foundLocation = location.place.find((location) => {
+//       return place.id === placeId;
+//     });
+//     foundLocation.place = req.body.place;
+//     location.save();
+//     console.log('SUCCESS');
+//     });
+//     }).catch((error) => {
+//     console.log(error);
+//     });
+
 module.exports = router;

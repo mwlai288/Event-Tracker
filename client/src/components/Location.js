@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import  { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import styled from 'styled-components';
+import { SelectCity } from '../styles/Styling';
+import { CityLinks } from '../styles/Styling';
 import AddEvent from './AddEvent'
 
 
@@ -34,7 +36,7 @@ class Location extends Component {
         );
         return (
             <div>
-              <h1>Choose Your City</h1>
+              <SelectCity>Choose Your City</SelectCity>
 
               <input type="text" 
                      placeholder ='Search'
@@ -45,9 +47,9 @@ class Location extends Component {
                 {filterLocation.map((location, i) => {
                     return (
                         <li key={i}>
-                           <Link to={`/location/${location._id}/event`}>
+                        <CityLinks><Link to={`/location/${location._id}/event`}>
                                 {location.place}
-                           </Link>
+                           </Link></CityLinks>
                         </li> );
                         })} 
                 </ul>

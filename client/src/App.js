@@ -38,7 +38,6 @@ class App extends Component {
             <Route exact path="/location/:locationId/event" component={EventList}/>
             <Route exact path="/event/:eventId/description" component={Description}/>
             <Route exact path="/user" component={User}/>
-            
           </div>
          </div>
       </Router>
