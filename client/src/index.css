@@ -1,9 +1,10 @@
 body {
-  /* text-shadow: 2px 2px #831609; */
+  text-shadow: 4px  black; 
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  color: #F35901;
+  color: #094D9F;
   font-family: 'Playfair Display', serif;  
-  /* background-image: url("http://i.imgur.com/0Tw6MyE.jpg"); */
+  background-image: url("http://i.imgur.com/NBp0DJ5.jpg");
+  background-size: cover;
 }
