@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { PlainText } from '../styles/Styling';
+import { DescriptionTitle, PagePad, PlainText } from '../styles/Styling';
 class Description extends Component {
   render() {
     return (
-      <div>
-        <h1>Welcome to DragonCon 2017</h1>
+      <PagePad>
+
+
+        <DescriptionTitle>Welcome to DragonCon 2017</DescriptionTitle>
         <PlainText>Largest multi-media, popular culture convention focusing on <br/>
           science fiction and fantasy, gaming, comics, literature, art, music, and film <br/>
           in the universe!</PlainText>
@@ -15,7 +17,7 @@ class Description extends Component {
 
                 {/* Favorite Event and Push Data to User Page */}
         <button>Click To Save Event</button>
-      </div>
+      </PagePad>
     );
   }
 }

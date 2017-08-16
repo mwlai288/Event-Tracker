@@ -32,7 +32,19 @@ export const HomeButton = styled.a`
     font-family: 'Fjalla One', sans-serif;
     `;
 
-export const PlainText = styled.div`
-    font-size: 15px;
+export const DescriptionTitle = styled.div`
+    font-size: 35px;
+    color: white;
     font-family: 'Fjalla One', sans-serif;
+    text-decoration: underline;    
+    padding: 15px 0 35px;
+`
+
+export const PlainText = styled.div`
+    font-size: 25px;
+    font-family: 'Fjalla One', sans-serif;
+`
+
+export const PagePad = styled.div`
+    padding: 0 0 0 5px;
 `
