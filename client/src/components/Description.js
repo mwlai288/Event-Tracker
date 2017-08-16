@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { DescriptionTitle, PagePad, PlainText } from '../styles/Styling';
+import { DescriptionTitle, PagePad, PlainText, AddButton } from '../styles/Styling';
 class Description extends Component {
   render() {
     return (
@@ -16,7 +16,7 @@ class Description extends Component {
           <br/>
 
                 {/* Favorite Event and Push Data to User Page */}
-        <button>Click To Save Event</button>
+        <AddButton>Click To Save Event</AddButton>
       </PagePad>
     );
   }

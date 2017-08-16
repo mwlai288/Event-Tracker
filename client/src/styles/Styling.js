@@ -32,6 +32,19 @@ export const HomeButton = styled.a`
     font-family: 'Fjalla One', sans-serif;
     `;
 
+export const AddButton = styled.a`
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 22px;
+    margin: 15px;
+    color: #073E34;
+    position: relative;
+    display: inline-block;
+    background-color: #55acee;
+    box-shadow: 0px 5px 0px 0px #3C93D5;
+    font-family: 'Fjalla One', sans-serif;
+    `;    
+
 export const DescriptionTitle = styled.div`
     font-size: 35px;
     color: white;

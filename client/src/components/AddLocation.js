@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import styled from 'styled-components';
+import { AddButton } from '../styles/Styling';
 import axios from 'axios';
 
 class AddLocation extends Component {
@@ -44,7 +44,7 @@ render()  {
           name='location'
           />
    
-      <button> Add New Location </button>
+      <AddButton> Add New Location </AddButton>
     </form>   
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import styled from 'styled-components';
 import axios from 'axios';
+import { AddButton } from '../styles/Styling';
 import AddLocation from './AddLocation';
 import AddEvent from './AddEvent';
 
@@ -44,7 +44,7 @@ render()  {
       <AddEvent />
 
   
-       <button>Delete Event </button> 
+       <AddButton>Delete Event </AddButton> 
 
       </div>
     );

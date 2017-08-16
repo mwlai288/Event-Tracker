@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { AddButton } from '../styles/Styling';
 import axios from 'axios';
 
 
@@ -61,7 +62,7 @@ class AddEvent extends Component {
                 type='text'
                 name='date'/>
 
-         <button> Add New Event </button>
+         <AddButton> Add New Event </AddButton>
             </form>
             
           
