@@ -77,13 +77,12 @@ atlanta.save(function(err) {
     console.log('atlanta created!');
   });
 
-  charleston.save(function(err) {
+charleston.save(function(err) {
     if (err) console.log(err);
   
     console.log('charleston created!');
   });
-  
-  orlando.save(function(err) {
+orlando.save(function(err) {
     if (err) console.log(err);
   
     console.log('orlando created!');
@@ -91,19 +90,19 @@ atlanta.save(function(err) {
 
   // save the Events
 
-  convention.save(function(err) {
+convention.save(function(err) {
     if (err) console.log(err);
   
     console.log('convention created!');
   });
   
-  sport.save(function(err) {
+sport.save(function(err) {
     if (err) console.log(err);
   
     console.log('sport created!');
   });
 
-  park.save(function(err) {
+park.save(function(err) {
       if (err) console.log(err);
       console.log('park created!');
   });
@@ -115,7 +114,7 @@ atlanta.save(function(err) {
  
   // save the User
 
-  will.save(function(err) {
+will.save(function(err) {
     if (err) console.log(err);
   
     console.log('will created!');

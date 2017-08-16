@@ -5,7 +5,7 @@ import Event from './components/Event';
 import EventList from './components/EventList'
 import Description from './components/Description';
 import User from './components/User';
-import {HomePageTitle} from './styles/Styling';
+import {HomePageTitle, HomeButton} from './styles/Styling';
 import NavBar from './styles/NavBar';
 import styled from 'styled-components';
 
@@ -13,7 +13,7 @@ import styled from 'styled-components';
 const Home = () => (
   <div>
   <h1>Welcome to Event Space</h1>
-  <Link to="/location"><button>Click to Begin</button></Link>
+  <Link to="/location"><HomeButton>Click to Begin</HomeButton></Link>
   <br/>
   </div>
 )

@@ -3,7 +3,7 @@ import  { Link } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
 import { SelectCity } from '../styles/Styling';
-import { CityLinks } from '../styles/Styling';
+import { CityLinks, TitleStyle } from '../styles/Styling';
 import AddEvent from './AddEvent'
 
 
@@ -36,7 +36,7 @@ class Location extends Component {
         );
         return (
             <div>
-              <SelectCity>Choose Your City</SelectCity>
+              <SelectCity>Select A City</SelectCity>
 
               <input type="text" 
                      placeholder ='Search'
@@ -49,7 +49,7 @@ class Location extends Component {
                         <li key={i}>
                         <CityLinks><Link to={`/location/${location._id}/event`}>
                                 {location.place}
-                           </Link></CityLinks>
+                        </Link></CityLinks>
                         </li> );
                         })} 
                 </ul>
